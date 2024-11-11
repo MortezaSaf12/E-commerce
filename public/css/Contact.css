@@ -1,0 +1,65 @@
+/* Contact Page Styles */
+.contact-page {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f2f2f2; /* Light text */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-container {
+    background-color: #333; /* Darker background for the container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px; /* Limit the width of the container */
+}
+
+.contact-title {
+    color: #ffffff; /* White color for the title */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.contact-name {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2em;
+    color: #00aaff; /* Highlight name with a different color */
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between items */
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #444; /* Background for each item */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #555; /* Darken background on hover */
+}
+
+.contact-label {
+    font-weight: bold; /* Make labels bold */
+}
+
+.contact-link {
+    color: #00aaff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}

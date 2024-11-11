@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+
+    {{!-- VERY IMPORTANT 
+      The links/routes will use the render() function from handlebars and render a code inside the "{{body}}
+      part of the page" --}}
+
+    <link rel="stylesheet" href="/css/Main.css" />
+    <link rel="stylesheet" href="/css/Login.css" />
+
+
+  </head>
+  <body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-brand">Morteza Safari</a>
+        <ul class="navbar-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/List">List</a></li>
+          <li><a href="/contact">Contact</a></li>
+          
+          {{#if user}}
+            <li><p>Welcome, {{user.username}}</p></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/secret">Secret</a></li>
+          {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content Section -->
+    {{{body}}}
+  </body>
+</html>

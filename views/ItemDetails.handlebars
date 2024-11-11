@@ -1,0 +1,14 @@
+<h1>{{item.name}}</h1>
+<p>Description: {{item.description}}</p>
+<p>Price: ${{item.price}}</p>
+<p>Available quantity: {{item.quantity}}</p>
+
+<!-- Only show edit and delete options to admin -->
+{{#if user.isAdmin}}
+  <form action="/item/{{item.id}}/delete" method="POST">
+    <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+  <a href="/item/{{item.id}}/edit" class="btn btn-warning">Edit</a>
+{{/if}}
+
+<a href="/list">Back to list</a>
